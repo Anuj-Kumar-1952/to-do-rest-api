@@ -24,7 +24,6 @@ A simple **To-Do List REST API** built using **Spring Boot, Java, and MySQL**, a
 ## Getting Started
 
 ### 1. Clone the repository
-```bash
 git clone https://github.com/Anuj-Kumar-1952/to-do-rest-api.git
 cd to-do-rest-api
 
