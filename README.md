@@ -61,4 +61,4 @@ Make sure MySQL is running and database is created before running the applicatio
 ## Postman Collection
 You can import the Postman collection to test the API:
 
-[Download Postman Collection](postman/To_Do_List_API.postman_collection.json)
+[Download Postman Collection](postman/To_Do_List_API_collection.json)
