@@ -1,0 +1,342 @@
+{
+	"info": {
+		"_postman_id": "09f6fe9d-27d7-4229-bab6-37a8bb26d284",
+		"name": "To Do List API collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45447523",
+		"_collection_link": "https://restapi-2285.postman.co/workspace/5d15d861-0c69-464e-8447-3322eb746210/collection/45447523-09f6fe9d-27d7-4229-bab6-37a8bb26d284?action=share&source=collection_link&creator=45447523"
+	},
+	"item": [
+		{
+			"name": "getAllTask",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "AllTask",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/getAll",
+							"path": [
+								"getAll"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Oct 2025 08:51:12 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"title\": \"Read Java book\",\n        \"description\": \"Read chapters 1-5 of Java Basics\",\n        \"status\": \"COMPLETED\",\n        \"priority\": \"LOW\",\n        \"dueDate\": \"2025-10-29\"\n    },\n    {\n        \"title\": \"Finish Spring Boot tutorial\",\n        \"description\": \"Complete the CRUD project\",\n        \"status\": \"PENDING\",\n        \"priority\": \"HIGH\",\n        \"dueDate\": \"2025-10-25\"\n    },\n    {\n        \"title\": \"Grocery shopping\",\n        \"description\": \"Buy vegetables, fruits, and milk\",\n        \"status\": \"PENDING\",\n        \"priority\": \"HIGH\",\n        \"dueDate\": \"2025-10-25\"\n    },\n    {\n        \"title\": \"Exercise\",\n        \"description\": \"Morning workout for 30 minutes\",\n        \"status\": \"COMPLETED\",\n        \"priority\": \"LOW\",\n        \"dueDate\": \"2025-10-25\"\n    },\n    {\n        \"title\": \"Call Mom\",\n        \"description\": \"Catch up with family\",\n        \"status\": \"PENDING\",\n        \"priority\": \"HIGH\",\n        \"dueDate\": \"2025-10-27\"\n    },\n    {\n        \"title\": \"Clean room\",\n        \"description\": \"Organize wardrobe and desk\",\n        \"status\": \"PENDING\",\n        \"priority\": \"HIGH\",\n        \"dueDate\": \"2025-10-27\"\n    },\n    {\n        \"title\": \"Finish project report\",\n        \"description\": \"Complete the final report for the internship project\",\n        \"status\": \"COMPLETED\",\n        \"priority\": \"LOW\",\n        \"dueDate\": \"2025-10-27\"\n    },\n    {\n        \"title\": \"Plan weekend trip\",\n        \"description\": \"Research destinations and book hotel\",\n        \"status\": \"PENDING\",\n        \"priority\": \"MEDIUM\",\n        \"dueDate\": \"2025-10-29\"\n    },\n    {\n        \"title\": \"Pay electricity bill\",\n        \"description\": \"Pay before the 30th of this month\",\n        \"status\": \"PENDING\",\n        \"priority\": \"MEDIUM\",\n        \"dueDate\": \"2025-10-29\"\n    },\n    {\n        \"title\": \"Learn Spring Security basics\",\n        \"description\": \"Complete at least 2 tutorials on Spring Security\",\n        \"status\": \"PENDING\",\n        \"priority\": \"HIGH\",\n        \"dueDate\": \"2025-10-30\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "getTaskById",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "taskByID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "/getTask/5",
+							"path": [
+								"getTask",
+								"5"
+							]
+						}
+					},
+					"status": "Found",
+					"code": 302,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Oct 2025 12:47:11 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"title\": \"Call Mom\",\n    \"description\": \"Catch up with family\",\n    \"status\": \"PENDING\",\n    \"priority\": \"HIGH\",\n    \"dueDate\": \"2025-10-27\"\n}"
+				}
+			]
+		},
+		{
+			"name": "updateByID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"title\": \"Call Mom\",\r\n    \"description\": \"talk on problems\",\r\n    \"status\": \"PENDING\",\r\n    \"priority\": \"MEDIUM\",\r\n    \"dueDate\": \"2025-10-29\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/upd/5",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"upd",
+						"5"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "updateByID",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"title\": \"Call Mom\",\r\n    \"description\": \"talk on problems\",\r\n    \"status\": \"PENDING\",\r\n    \"priority\": \"MEDIUM\",\r\n    \"dueDate\": \"2025-10-29\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/upd/5",
+							"path": [
+								"upd",
+								"5"
+							]
+						}
+					},
+					"status": "Accepted",
+					"code": 202,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Oct 2025 13:07:29 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "createTask",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"start apply for interview \",\r\n    \"description\": \"try offcampus in non-tech\",\r\n    \"status\": \"PENDING\",\r\n    \"priority\": \"HIGH\",\r\n    \"dueDate\": \"2025-10-26\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/create",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"start apply for interview \",\r\n    \"description\": \"try offcampus in non-tech\",\r\n    \"status\": \"PENDING\",\r\n    \"priority\": \"HIGH\",\r\n    \"dueDate\": \"2025-10-26\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/create",
+							"path": [
+								"create"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Oct 2025 13:12:12 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"title\": \"start apply for interview \",\n    \"description\": \"try offcampus in non-tech\",\n    \"status\": \"PENDING\",\n    \"priority\": \"HIGH\",\n    \"dueDate\": \"2025-10-26\"\n}"
+				}
+			]
+		},
+		{
+			"name": "deleteByID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"start apply for interview \",\r\n    \"description\": \"try offcampus in non-tech\",\r\n    \"status\": \"PENDING\",\r\n    \"priority\": \"HIGH\",\r\n    \"dueDate\": \"2025-10-26\"\r\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/del/10",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"del",
+						"10"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "deleteByID",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"start apply for interview \",\r\n    \"description\": \"try offcampus in non-tech\",\r\n    \"status\": \"PENDING\",\r\n    \"priority\": \"HIGH\",\r\n    \"dueDate\": \"2025-10-26\"\r\n}"
+						},
+						"url": {
+							"raw": "/del/12",
+							"path": [
+								"del",
+								"12"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 21 Oct 2025 13:47:14 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
