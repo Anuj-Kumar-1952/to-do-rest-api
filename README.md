@@ -58,3 +58,8 @@ Status can be PENDING or COMPLETED only.
 Priority can be LOW, MEDIUM, or HIGH.
 Dates should be in YYYY-MM-DD format.
 Make sure MySQL is running and database is created before running the application.
+
+## Postman Collection
+You can import the Postman collection to test the API:
+
+[Download Postman Collection](postman/ToDoListAPI.postman_collection.json)
