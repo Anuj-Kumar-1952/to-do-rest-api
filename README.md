@@ -29,7 +29,6 @@ git clone https://github.com/Anuj-Kumar-1952/to-do-rest-api.git
 cd to-do-rest-api
 
 ### 2. Configure MySQL Database
-
 Edit src/main/resources/application.properties:
 
 spring.datasource.url=jdbc:mysql://localhost:3306/todo_db
@@ -48,9 +47,9 @@ http://localhost:8080/todo
 
 ###4. API Endpoints
 Method	   Endpoint	         Description
-GET	       /api/tasks	     Get all tasks
+GET	       /api/tasks	       Get all tasks
 GET	       /api/tasks/{id}	 Get a specific task by ID
-POST	   /api/tasks	     Create a new task
+POST	     /api/tasks	       Create a new task
 PUT	       /api/tasks/{id}	 Update a task
 DELETE	   /api/tasks/{id}	 Delete a task
 
